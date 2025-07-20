@@ -4,9 +4,52 @@
   переключая тему
 */
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --cover_image: url("../images/cover-image-light.png");
+    --page-background: #fff1f7;
+    --subtitle-color: #353430;
+    --logo-color: #ffc2e6;
+    --hover-button: rgba(50, 49, 45, 0.4);
+    --focus: #353430;
+    --focus-border: #353430;
+    --accent-color: #ff8dcb;
+    --navigation-color: #353430;
+    --title-color: #353430;
+    --shadow-color: #ff8dcb;
+    --header-decor: #353430;
+    --title-decor: #ff8dcb;
+    --article-title: #353430;
+    --button-color: #353430;
+    --link-color: #ff8dcb;
+    --hover-link: #353430;
+    --border-color: #ff0070;
+    --paragraph-color: #353430;
+  }
+}
+
 :root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --cover_image: url("../images/cover-image-light.png");
+  --page-background: #fff1f7;
+  --subtitle-color: #353430;
+  --logo-color: #ffc2e6;
+  --hover-button: rgba(50, 49, 45, 0.4);
+  --focus: #353430;
+  --focus-border: #353430;
+  --accent-color: #ff8dcb;
+  --navigation-color: #353430;
+  --title-color: #353430;
+  --shadow-color: #ff8dcb;
+  --header-decor: #353430;
+  --title-decor: #ff8dcb;
+  --article-title: #353430;
+  --button-color: #353430;
+  --link-color: #ff8dcb;
+  --hover-link: #353430;
+  --border-color: #ff0070;
+  --paragraph-color: #353430;
+}
+
+.theme-light .rec-decoration {
+  display: none;
 }
