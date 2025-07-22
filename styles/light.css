@@ -6,7 +6,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --cover_image: url("../images/cover-image-light.png");
+    --cover-image: url("../images/cover-image-light.png");
     --page-background: #fff1f7;
     --subtitle-color: #353430;
     --logo-color: #ffc2e6;
@@ -26,9 +26,13 @@
     --border-color: #ff0070;
     --paragraph-color: #353430;
   }
+  .rec-decoration {
+    display: none;
+  }
 }
 
 :root.theme-light {
+  --hero-title: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   --cover_image: url("../images/cover-image-light.png");
   --page-background: #fff1f7;
   --subtitle-color: #353430;

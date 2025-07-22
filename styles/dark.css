@@ -5,7 +5,7 @@
 */
 
 :root.theme-dark {
-  --cover_image: url("../images/cover-image-dark.png");
+  --cover-image: url("../images/cover-image-dark.png");
   --logo-color: #db00ff;
   --hover-button: rgba(255, 0, 112, 0.4);
   --hover-link: #f1b2ce;
@@ -27,51 +27,6 @@
   --paragraph-color: #f1b2ce;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --cover_image: url("../images/cover-image-dark.png");
-    --logo-color: #db00ff;
-    --hover-button: rgba(255, 0, 112, 0.4);
-    --hover-link: #f1b2ce;
-    --focus: #ff0070;
-    --focus-border: #f1b2ce;
-    --page-background: #fff1f7;
-    --subtitle-color: #000028;
-    --navigation-color: #ff0070;
-    --background-title: #ff0070;
-    --title-color: #ff0070;
-    --shadow-color: #ff0070;
-    --header-decor: #ff0070;
-    --title-decor: #ff0070;
-    --article-title: #000028;
-    --rec-decor: #ff0070;
-    --button-color: #ff0070;
-    --link-color: #ff0070;
-    --border-color: #ff0070;
-    --paragraph-color: #f1b2ce;
-  }
-}
-
-.rec-decoration {
-  position: absolute;
-  top: clamp(12px, calc(4.37px + 2.04vw), 20px);
-  right: clamp(19px, calc(9.46px + 2.54vw), 29px);
+.theme-dark .rec-decoration {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  color: var(--rec-decor, #ff0070);
-  text-transform: uppercase;
-}
-
-.rec-decoration:after {
-  content: "";
-  display: block;
-  top: clamp(18px, 2.55vw, 28px);
-  right: clamp(19px, 2.55vw, 29px);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--rec-decor, #ff0070);
-  background-color: var(--rec-decor, #ff0070);
 }

@@ -5,24 +5,79 @@
   font-family: var(--font-family, monospace);
   font-size: 18px;
   line-height: 23.4px;
-  background-image: var(--cover_image, url("../images/cover-image-dark.png"));
+  background-image: var(--cover-image, url("../images/cover-image-dark.png"));
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   background-color: var(--page-background, #000028);
 }
 
+header {
+  align-items: start;
+}
+
 .cover {
   display: grid;
-  min-block-size: 100vh;
   align-items: center;
   padding: clamp(10px, 2.56vw, 20px);
 }
 
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  top: clamp(10px, 2.6vw, 20px);
+  right: clamp(10px, 2.6vw, 20px);
+  width: 25px;
+  height: 25px;
+  margin-inline-start: 5px;
+  border-inline-end: 1px solid var(--header-decor, #ff0070);
+  border-block-start: 1px solid var(--header-decor, #ff0070);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  bottom: clamp(10px, 2.6vw, 20px);
+  left: clamp(10px, 2.6vw, 20px);
+  width: 25px;
+  height: 25px;
+  border-inline-start: 1px solid var(--header-decor, #ff0070);
+  border-block-end: 1px solid var(--header-decor, #ff0070);
+}
+
+.rec-decoration {
+  position: absolute;
+  top: clamp(12px, calc(4.37px + 2.04vw), 20px);
+  right: clamp(19px, calc(9.46px + 2.54vw), 29px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--rec-decor, #ff0070);
+  text-transform: uppercase;
+}
+
+.rec-decoration:after {
+  content: "";
+  display: block;
+  top: clamp(18px, 2.55vw, 28px);
+  right: clamp(19px, 2.55vw, 29px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--rec-decor, #ff0070);
+  background-color: var(--rec-decor, #ff0070);
+}
+
 .header__theme-menu {
+  display: flex;
   color: var(--navigation-color, #ff0070);
   justify-self: end;
-  margin-block: 65px;
+  margin-block: 65px 70px;
 }
 
 .header__theme-menu-list {
@@ -68,7 +123,7 @@
 
 .hero__subtitle {
   color: var(--subtitle-color, #000028);
-  margin-block: 55px;
+  margin-block: 55px 55px;
   font-weight: bold;
   line-height: 23.4px;
 }
@@ -127,21 +182,12 @@
   border: var(--focus-border, #f1b2ce) 1px solid;
 }
 
-.section-advice__title {
-  margin-block-start: 0px;
-  margin-block-end: 0px;
-}
-
-.section__advice-list li:first-child h4.title {
-  margin-block-start: 0px;
-}
-
 .articles-list .title {
   font-weight: normal;
 }
 
 .section-advice__title {
-  margin-block: 20px;
+  margin-block: 20px 0px;
 }
 
 .gallery__list {
@@ -164,6 +210,8 @@
 }
 
 .footer {
+  block-size: 100vh;
+  min-block-size: 668px;
   align-items: center;
   justify-content: center;
 }
@@ -204,11 +252,11 @@
     margin-block-start: 0;
   }
 
-  .article_list li:first-child h3.title {
+  .article_list .title_first-in-list {
     margin-block-start: 0;
   }
 
-  .reasons__card-list li:first-child h3.title {
+  .reasons__card-list .title_first-in-list {
     margin-block-start: 0;
   }
 
@@ -236,18 +284,19 @@
     gap: 20px;
   }
 
-  .gallery__item:first-child,
-  .gallery__item:last-child {
+  .gallery__wide {
+    display: grid;
     grid-column-start: span 2;
   }
 
-  .gallery__item:nth-child(2),
-  .gallery__item:nth-child(3) {
+  .gallery__high {
+    display: grid;
     grid-row-start: span 2;
   }
 
   .footer {
     min-block-size: 1024px;
+    block-size: 100vh;
   }
 
   .footer .hero__title {
@@ -261,7 +310,6 @@
   }
 
   .header__theme-menu {
-    display: inline-block;
     margin-block: 0px;
     margin-inline-start: 20px;
     align-self: flex-start;
@@ -269,7 +317,7 @@
     margin-block-end: 80px;
   }
 
-  .section:nth-child(1) {
+  .gap-on-large {
     gap: 33px;
   }
 
@@ -292,6 +340,10 @@
     inline-size: 315px;
   }
 
+  .reasons__card-list .title {
+    margin-block-start: 0px;
+  }
+
   .reasons__card-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -311,7 +363,8 @@
   }
 
   .footer {
-    min-block-size: 100vh;
+    min-block-size: 1024px;
+    block-size: 100vh;
   }
 
   .footer .hero__title {
