@@ -17,6 +17,7 @@
     --navigation-color: #353430;
     --title-color: #353430;
     --shadow-color: #ff8dcb;
+    --shadow-footer: #ff0070;
     --header-decor: #353430;
     --title-decor: #ff8dcb;
     --article-title: #353430;
@@ -31,9 +32,9 @@
   }
 }
 
-:root.theme-light {
+.theme-light {
   --hero-title: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
-  --cover_image: url("../images/cover-image-light.png");
+  --cover-image: url("../images/cover-image-light.png");
   --page-background: #fff1f7;
   --subtitle-color: #353430;
   --logo-color: #ffc2e6;
@@ -44,6 +45,7 @@
   --navigation-color: #353430;
   --title-color: #353430;
   --shadow-color: #ff8dcb;
+  --shadow-footer: #ff0070;
   --header-decor: #353430;
   --title-decor: #ff8dcb;
   --article-title: #353430;
