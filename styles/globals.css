@@ -23,6 +23,11 @@ p {
 }
 
 p {
+  line-height: 23.4px;
+  font-size: 18px;
+  font-family: var(--font-family, monospace);
+  margin: 0;
+  padding: 0;
   color: var(--paragraph-color, #f1b2ce);
 }
 
